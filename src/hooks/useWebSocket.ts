@@ -39,7 +39,7 @@ export const useWebSocket = (url: string, options: WebSocketOptions = {}) => {
         if (reconnectTimeout.current) {
           clearTimeout(reconnectTimeout.current);
         }
-        reconnectTimeout.current = setTimeout(connect, 5000);
+        reconnectTimeout.current = setTimeout(connect, 3001);
       };
 
       ws.current.onmessage = (event) => {
